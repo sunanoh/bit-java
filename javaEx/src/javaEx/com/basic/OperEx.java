@@ -6,9 +6,67 @@ public class OperEx {
 		// TODO Auto-generated method stub
 		// arithOper();
 		// incDecOper();
-		logicalOper();
+		// logicalOper();
+		// bitOper();
+		conditionalOper();
+	}
+	
+	// 3항 연산자
+	public static void conditionalOper() {
+		// 논리비교 ? (true일때) 값 or 연산식 : (false일때)값 or 연산식
+		// 간단한 값의 제어, 코드 가독성을 높일 수 있다
+		
+		int a = 10;
+
+		// a가 짝수면 "짝수", 아니면 "홀수" 문자열
+		String message = a % 2 == 0 ? "a는 짝수" : "a는 홀수";
+		System.out.println(message);
+		
+		int score = 85;
+		// 점수가 80 이상이면 Good
+		// 점수가 50 이상이면 Pass
+		// 그렇지 않으면 Fail
+		
+		message = score >= 80 ? "Good" : (score >= 50 ? "Pass" : "Fail"); 
+		System.out.println(message);
+		//중첩가능하나, 추천하지 않음
 	}
 
+	// 비트 연산자
+	public static void bitOper() {
+		// and (&), or (|), not (~)
+		// 정수형 데이터를 비트 단위로 제어하는 연산자
+		
+		byte b1 = 0b1101;
+		byte b2 = 0b0111;
+		
+		int result = b1 & b2; // bit and 연산
+		System.out.println(Integer.toBinaryString(result));
+		
+		result = b1 | b2; // bit or 연산
+		System.out.println(Integer.toBinaryString(result));
+		
+		result = ~b1; // bit not 연산
+		System.out.println(Integer.toBinaryString(result));
+		System.out.println(result);
+		
+		// 비트 시프트
+		// << : 비트를 왼쪽으로 이동 (정수형 2의 배수의 곱)
+		// >> : 비트를 오른쪽으로 이동 (정수형 2의 배수의 나눗셈)
+		
+		int val = 1;
+		// 왼쪽으로 1비트 이동
+		System.out.println(val);
+		System.out.println(Integer.toBinaryString(val << 1));
+		System.out.println(Integer.toBinaryString(val << 2));
+		
+		val = 0b100;
+		// 오른쪽으로 1비트 이동
+		System.out.println(Integer.toBinaryString(val));
+		System.out.println(Integer.toBinaryString(val >> 1));
+		System.out.println(Integer.toBinaryString(val >> 2));
+	}
+	
 	// 비교, 논리연산
 	public static void logicalOper() {
 		// 비교 연산자 : >, >=, <, <=, == (같다), != (같지않다)
@@ -35,6 +93,7 @@ public class OperEx {
 		boolean notR = !r;
 		System.out.println("논리부정 : " + notR);
 	}
+
 	
 	// 증가, 감소 연산자
  	public static void incDecOper() {
