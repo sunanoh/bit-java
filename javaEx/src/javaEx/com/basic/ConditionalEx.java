@@ -18,7 +18,23 @@ public class ConditionalEx {
 		//forExSelf();
 		//forExSelf2();
 		//continueEx();
-		breakEx();
+		//breakEx();
+		randomEx();
+	}
+	
+	public static void randomEx() {
+		// 복수번의 랜덤(1~6)을 뽑아서 합산
+		
+		int rollCnt = 6; // 횟수
+		int total = 0; // 합산변수
+		
+		for(int i = 1; i <= rollCnt ; i++) {
+			int num = (int)(Math.random()*6)+1;
+			System.out.println(num);
+			total += num;
+		}
+		System.out.println("6개 랜덤 숫자의 합은 : " +  total);
+		
 	}
 	
 	public static void breakEx() {
