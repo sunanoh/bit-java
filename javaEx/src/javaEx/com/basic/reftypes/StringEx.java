@@ -4,7 +4,7 @@ public class StringEx {
 
 	public static void main(String[] args) {
 		//stringBasic();
-		stringFormat();
+		//stringFormat();
 	}
 	
 	public static void stringFormat() {
