@@ -1,6 +1,6 @@
 package com.javax.oop.goods.v1;
 
-// v2
+// v1
 // 접근 제한자의 이해
 public class Goods {
 	// 필드(속성)
