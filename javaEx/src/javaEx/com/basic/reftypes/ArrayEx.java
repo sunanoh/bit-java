@@ -18,7 +18,7 @@ public class ArrayEx {
 		
 		System.arraycopy(scores, // 원본배열
 				         0, // 원본 배열 복사 시작 인덱스 
-				         targeㅅ, // 대상 배열
+				         target, // 대상 배열
 				         3, // 대상 배열 내 복사 시작 인덱스
 				         scores.length); // 복사 내용의 길이
 		
