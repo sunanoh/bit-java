@@ -5,29 +5,29 @@ public class StaticExApp {
 		public static void main(String[] args) {
 			
 			StaticEx s1 = new StaticEx();
-			// Ã¹ ¹øÂ° ·Îµù : static ºí·Ï ¼öÇà -> »ı¼ºÀÚ
-			// refCount´Â static -> ÀÎ½ºÅÏ½º »ı¼º ¾øÀÌ Á¢±Ù °¡´É
+			// ì²« ë²ˆì§¸ ë¡œë”© : static ë¸”ë¡ ìˆ˜í–‰ -> ìƒì„±ì
+			// refCountëŠ” static -> ì¸ìŠ¤í„´ìŠ¤ ìƒì„± ì—†ì´ ì ‘ê·¼ ê°€ëŠ¥
 			System.out.println("RefCount: " + StaticEx.refCount);
 			
 			StaticEx s2 = new StaticEx();
-			// ¾Õ¿¡¼­ static ÃÊ±âÈ­ ¿Ï·á : static ºí·Ï ¼öÇà ¾øÀÌ -> »ı¼ºÀÚ
+			// ì•ì—ì„œ static ì´ˆê¸°í™” ì™„ë£Œ : static ë¸”ë¡ ìˆ˜í–‰ ì—†ì´ -> ìƒì„±ì
 			System.out.println("RefCount: " + StaticEx.refCount);
 			
 			
-			s1 = null; // ÂüÁ¶ ÇØÁ¦
+			s1 = null; // ì°¸ì¡° í•´ì œ
 
-			System.out.println("s1 ÇØÁ¦: " ); // ÇØÁ¦ÇÑ´Ù°í ¹Ù·Î finallizeÇÏ´Â°Ç ¾Æ´Ï¶ó¼­..¹Ù·Î °á°ú¾È³ª¿Ã ¼öÀÖÀ½
+			System.out.println("s1 í•´ì œ: " ); // í•´ì œí•œë‹¤ê³  ë°”ë¡œ finallizeí•˜ëŠ”ê±´ ì•„ë‹ˆë¼ì„œ..ë°”ë¡œ ê²°ê³¼ì•ˆë‚˜ì˜¬ ìˆ˜ìˆìŒ
 			System.out.println("RefCount: " + StaticEx.refCount);
 			
 			
-			// °¡ºñÁö Äİ·ºÅÍ °­Á¦ ¼öÇà
-			// ÁÖÀÇ : Á÷Á¢ °¡ºñÁö Äİ·ºÅÍ¸¦ È£ÃâÇÏÁö ¾Êµµ·Ï ÇÏÀÚ
-			// ÀÛµ¿ ¿ø¸® ÀÌÇØ¸¦ À§ÇÑ ÄÚµåÀÌ´Ï ÀÌ ÄÚµå´Â »ç¿ë ¾Êµµ·Ï ÇÕ½Ã´Ù.
+			// ê°€ë¹„ì§€ ì½œë ‰í„° ê°•ì œ ìˆ˜í–‰
+			// ì£¼ì˜ : ì§ì ‘ ê°€ë¹„ì§€ ì½œë ‰í„°ë¥¼ í˜¸ì¶œí•˜ì§€ ì•Šë„ë¡ í•˜ì
+			// ì‘ë™ ì›ë¦¬ ì´í•´ë¥¼ ìœ„í•œ ì½”ë“œì´ë‹ˆ ì´ ì½”ë“œëŠ” ì‚¬ìš© ì•Šë„ë¡ í•©ì‹œë‹¤.
 			
 			System.gc();
-			// Àá½Ã ´ë±â
+			// ì ì‹œ ëŒ€ê¸°
 			try {
-				Thread.sleep(3000); // 3ÃÊ ´ë±â
+				Thread.sleep(3000); // 3ì´ˆ ëŒ€ê¸°
 				System.out.println("RefCount: " + StaticEx.refCount);
 			} catch(Exception e) {
 				

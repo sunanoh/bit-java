@@ -1,4 +1,4 @@
-package com.javax.oop;
+package javaEx.com.basic;
 
 public class MethodEx {
 
