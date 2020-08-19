@@ -1,5 +1,6 @@
 package com.javax.exception;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -8,7 +9,27 @@ public class ExceptionEx {
 	public static void main(String[] args) {
 		//arithmeticExceptionEx();
 		//indexOutOfBoundEx();
-		nullPointerExceptionEx();
+		//nullPointerExceptionEx();
+		customExceptionEx();
+	}
+	
+	private static void customExceptionEx() {
+		// 사용자 정의 예외의 활용
+		ThrowExcept ex = new ThrowExcept();
+		try {
+			ex.executeCheckedException(); // 체크드 익셉션 발생
+			ex.executeUncheckedException(); // 언체크드 익셉션 발생
+			System.out.println("10/0 = " + ex.divide(10, 0));
+		}catch(IOException e) {
+			System.err.println("예외 메시지 :"  + e.getMessage());
+		}catch(CustomArithmeticException e) {
+			System.err.println("사용자 정의 예외 메시지 : " + e.getMessage());
+			System.err.printf("예외 상황 발생시 num1 = %d, num2 = %d%n",e.getNum1(), e.getNum2());
+		}catch(RuntimeException e) {
+			System.err.println("런 타임 예외 메시지  : " + e.getMessage());
+		}
+		//catch(CustomArithmeticException e) { // 이 클래스는 runtimeexcetion을 상속받은거라, 위에서 미리처리해버린 상태. 순서가 중요함
+		//}// 본예외는 runtimeException의 자손이므로 runtimeexception보다 위에서 처리 필요
 	}
 	
 	// 가장 흔히 발생하는 예외
@@ -27,8 +48,7 @@ public class ExceptionEx {
 		System.out.println("end of code");
 			
 	}
-	
-	
+		
 	private static void indexOutOfBoundEx() {
 		int[] intAry = new int[] {3, 6, 9 };
 		
