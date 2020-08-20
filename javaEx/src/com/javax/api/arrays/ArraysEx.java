@@ -29,7 +29,6 @@ public class ArraysEx {
 		System.out.println("검색된 인덱스: "+index);
 	}
 	
-	
 	// 검색 테스트
 	private static void basicSearc() {
 		// java는 기본적으로 binary search 방식을 채택함 
