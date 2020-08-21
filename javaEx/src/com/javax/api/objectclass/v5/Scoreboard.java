@@ -8,6 +8,7 @@ public class Scoreboard implements Cloneable{
 	// 깊은 복제를 위해서는 참조타입필드도 복제해주어 분리해 줘야 한다.
 	private int scores[]; // 정수 배열
 	
+
 	
 	// 생성자
 	public Scoreboard(int[] scores) {
