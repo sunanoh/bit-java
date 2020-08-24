@@ -39,7 +39,7 @@ public class StackEx {
 			System.out.println("STACK : "+ stack);
 		}*/
 		
-		while(!stack.empty()){
+		while(!stack.empty()){ // 스택이 비어있지 않으면 반복
 			System.out.println("인출 데이터 : " + stack.pop());
 			System.out.println("STACK : "+ stack);
 		}
