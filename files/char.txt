@@ -2,3 +2,8 @@ Bit Computer
 Java Programing 
 2020.08
 재확인
+
+강사님 깃허브
+https://github.com/namsk/bit-java
+- 깃허브 참고 : http://bit.ly/bit20-summer-java
+https://uxgjs.tistory.com/183
